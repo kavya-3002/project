@@ -1,14 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            *{
 
-    <link rel="stylesheet" href="index.css"
+                  padding:0;
+                  margin:0;
+                  box-sizing:border-box;
+
+            }
+            .galaxy{
+                  height:100vh;
+                  width:100vw;
+                  border: 2px solid red;
+                  display:flex;
+                  justify-content:space-evenly;
+                  align-items:center;
+
+            }
+            .sun{
+                  background-image: url("https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001435/GSFC_20171208_Archive_e001435~large.jpg?w=1920&h=1920&fit=clip&crop=faces%2Cfocalpoint");
+                  height:100px;
+                  width:100px;
+                  background-size:contain;
+                  border-radius:50%;
+                  margin:150px;
+                  position: absolute;      
+                  
+            }
+            .mercury-circle{
+                  height:170px;
+                  width:170px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 10s linear 0s infinite normal;
+                  
+
+            }
+            .mercury{
+                  background-image:url("https://nssdc.gsfc.nasa.gov/planetary/image/mercury.jpg");
+                  background-size: contain;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:10px; 
+                    
+                  
+            }
+            .venus-circle{
+                  height:250px;
+                  width:250px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 30s linear 0s infinite normal;
+
+            }
+            .venus{
+                  background-image:url("https://wallpapercave.com/wp/wp2248865.jpg");
+                  background-size: contain;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:40px; 
+            }
+            .earth-circle{
+                  height:350px;
+                  width:350px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 40s linear 0s infinite normal;
+            }
+            .earth{
+                  background-image:url("https://purepng.com/public/uploads/large/purepng.com-earthearthplanetglobethird-planet-from-the-sun-1411526987984219sr.png");
+                  background-size: contain;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:55px; 
+            }
+            .mars-circle{
+                  height:450px;
+                  width:450px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 50s linear 0s infinite normal;
+            }
+            .mars{
+                  background-image:url("https://tse2.mm.bing.net/th/id/OIP.BjgurCBsYU1DMsANfd6TwgHaIA?pid=Api&P=0&h=180");
+                  background-size: cover;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:100px; 
+            }
+            .jupiter-circle{
+                  height:550px;
+                  width:550px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 60s linear 0s infinite normal;
+            }
+            .jupiter{
+                  background-image:url("https://wallpapers.com/images/hd/nasa-iphone-jupiter-south-pole-9u578ruwtvocq627.jpg");
+                  background-size: cover;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:130px; 
+            }
+            .saturn-circle{
+                  height:650px;
+                  width:650px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 80s linear 0s infinite normal;
+            }
+            .saturn{
+                  background-image:url("https://img.freepik.com/premium-photo/realistic-image-planet-saturn-transparent-background-planet-saturn-isolated-transparent_418821-4743.jpg?w=1380");
+                  background-size: cover;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:180px; 
+            }
+            .uranus-circle{
+                  height:750px;
+                  width:750px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 100s linear 0s infinite normal;
+            }
+            .uranus{
+                  background-image:url("https://tse4.mm.bing.net/th/id/OIP.2f8rQzZJESGOAiLHX73ahwAAAA?pid=Api&P=0&h=180");
+                  background-size: cover;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:220px; 
+            }
+            .neptune-circle{
+                  height:850px;
+                  width:850px;
+                  border: 2px solid white;
+                  border-radius:50%;
+                  position:absolute;
+                  animation: rotate 120s linear 0s infinite normal;
+            }
+            .neptune{
+                  background-image:url("https://thumbs.dreamstime.com/b/planet-neptune-isolated-white-background-part-solar-system-d-space-render-elements-image-furnished-na-130709063.jpg");
+                  background-size: cover;  
+                  height:40px;
+                  width:40px;
+                  /* border:2px solid blue; */
+                  position:absolute;
+                  border-radius:50%;
+                  top:250px; 
+            }
+
+            
+
+            @keyframes rotate{
+                  
+                  100%{
+                        transform:rotate(360deg);
+                  }
+
+            }
+      </style>
 </head>
 <body>
-    <h1 style="color:blue;">Hello</h1>  
+  
+      <div class="galaxy">
+        <img src="https://images.unsplash.com/photo-1520257328559-2062fc7de0b3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c29sYXIlMjBzeXN0ZW0lMjBwbGFuZXRzfGVufDB8fDB8fHww" alt="" height="1000px" width="1000px">
+        
+            <div class="neptune-circle">
+                  <div class="neptune"></div>
+            </div>
+            <div class="uranus-circle">
+                  <div class="uranus"></div>
+            </div>
+            <div class="saturn-circle">
+                  <div class="saturn"></div>
+            </div>
+            <div class="jupiter-circle">
+                  <div class="jupiter"></div>
+            </div>
+            <div class="mars-circle">
+                  <div class="mars"></div>
+            </div>
+            <div class="earth-circle">
+                  <div class="earth"></div>
+            </div>
+            <div class="venus-circle">
+                  <div class="venus"></div>
+            </div>
+            <div class="mercury-circle"> 
+                  <div class="mercury"></div> 
+            </div>
+                  <div class="sun"></div>
+            </div>
+      </div>
 </body>
-
 </html>
